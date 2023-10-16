@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      workdir: myproject/pom.xml
+      workdir: myproject
         
     name: Build with Java 8
     steps:
