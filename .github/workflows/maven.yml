@@ -7,6 +7,8 @@ on:
 jobs:
   build:
     runs-on: ${{matrix.os}}
+    env:
+      workdir: myproject/pom.xml
     strategy:
       matrix:
         java: [8, 11]
@@ -30,4 +32,4 @@ jobs:
       
       - name: Build with Maven
         run: mvn verify
-        working-directory: myproject/pom.xml
+        working-directory: ${{ env.workdir }}
